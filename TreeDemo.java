@@ -70,6 +70,7 @@ class BinarySearchTree {
     */
    public int getMin(Node root) {
       // implement me
+      return 0;
    }
 
    /*
