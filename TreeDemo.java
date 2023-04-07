@@ -79,6 +79,7 @@ class BinarySearchTree {
     */
    public int getMax(Node root) {
       // implement me
+      return 0;
    }
 
    /*
