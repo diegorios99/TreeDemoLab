@@ -1,3 +1,5 @@
+import java.util.TooManyListenersException;
+
 class Node {
    int value;
    Node left, right;
@@ -122,7 +124,11 @@ class BinarySearchTree {
     */
    public int getMax(Node root) {
       // implement me
-      return 0;
+      if (root.right == null) {
+         return root.value;
+      } else {
+         return getMax(root.right);
+      }
    }
 
    /*
