@@ -51,7 +51,7 @@ class BinarySearchTree {
       }
 
       inOrderTraversal(root.left);
-      System.out.print(root.value);
+      System.out.print(root.value + ", ");
       inOrderTraversal(root.right);
    }
 
@@ -60,6 +60,14 @@ class BinarySearchTree {
     */
    public void postOrderTraversal(Node root) {
       // implement me
+      if (root == null) {
+         return;
+      }
+
+      postOrderTraversal(root.left);
+      postOrderTraversal(root.right);
+      System.out.print(root.value + ", ");
+
    }
 
    /*
