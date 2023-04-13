@@ -1,5 +1,3 @@
-import java.util.TooManyListenersException;
-
 class Node {
    int value;
    Node left, right;
@@ -16,8 +14,12 @@ class BinarySearchTree {
 
    Node root;
 
-   /*
-    * recursive insert method
+   /**
+    * insest method that puts new values into the BST
+    * 
+    * @param root  node that is going to be added
+    * @param value the value for the node
+    * @return returns a Node
     */
    public Node insert(Node root, int value) {
       // base case
@@ -36,8 +38,11 @@ class BinarySearchTree {
       return root;
    }
 
-   /*
-    * pre-order traversal
+   /**
+    * preOrderTravesal method that walks the BST and prints out the values in pre
+    * order
+    * 
+    * @param root
     */
    public void preOrderTraversal(Node root) {
       // implement me
@@ -50,8 +55,11 @@ class BinarySearchTree {
       preOrderTraversal(root.right);
    }
 
-   /*
-    * in-order traversal
+   /**
+    * inOrderTraversal method that walks the BST and prints out the values in
+    * order
+    * 
+    * @param root
     */
    public void inOrderTraversal(Node root) {
       // implement me
@@ -64,8 +72,11 @@ class BinarySearchTree {
       inOrderTraversal(root.right);
    }
 
-   /*
-    * post-order traversal
+   /**
+    * postOrderTraversal method that walks the BST and prints out the values post
+    * order
+    * 
+    * @param root
     */
    public void postOrderTraversal(Node root) {
       // implement me
@@ -79,9 +90,12 @@ class BinarySearchTree {
 
    }
 
-   /*
-    * a method to find the node in the tree
-    * with a specific value
+   /**
+    * find method that searches the BST for the key
+    * 
+    * @param root current node that is being looked at
+    * @param key  value that is being looked for
+    * @return return a boolean value
     */
    public boolean find(Node root, int key) {
       // implement me
@@ -105,9 +119,11 @@ class BinarySearchTree {
       return false;
    }
 
-   /*
-    * a method to find the node in the tree
-    * with a smallest key
+   /**
+    * getMin method that searches the BST for the minimum value
+    * 
+    * @param root current node that is being looked at
+    * @return return an int value
     */
    public int getMin(Node root) {
       // implement me
@@ -118,9 +134,11 @@ class BinarySearchTree {
       }
    }
 
-   /*
-    * a method to find the node in the tree
-    * with a largest key
+   /**
+    * getMax method that searches the BST for the maximum value
+    * 
+    * @param root current node that is being looked at
+    * @return return an int value
     */
    public int getMax(Node root) {
       // implement me
@@ -131,9 +149,12 @@ class BinarySearchTree {
       }
    }
 
-   /*
-    * this method will not compile until getMax
-    * is implemented
+   /**
+    * delete method that takes in a Node and a value
+    * 
+    * @param root current root that is being looked at
+    * @param key  the value that needs to be deleted
+    * @return returns a Node
     */
    public Node delete(Node root, int key) {
 
@@ -163,8 +184,10 @@ class BinarySearchTree {
       return root;
    }
 
-   /*
-    * inserts a node into the tree
+   /**
+    * insert method that adds to BST
+    * 
+    * @param value value that is being added
     */
    public void insert(int value) {
       // tree is empty
